@@ -137,15 +137,15 @@ function App() {
         <div className="hero-inner">
           <div className="hero-text">
             <h1 className="hero-title">
-              <span className="title-highlight">Andrew Peters</span>
+              <span className="title-highlight">Andrew Peters PhD</span>
             </h1>
             <div className="hero-skills">
               <span className="hero-skill-tag">Data Visualisation</span>
               <span className="hero-skill-tag">Data Science</span>
             </div>
             <p className="hero-intro">
-              PhD Data Scientist specialising in <b>RShiny development</b> and <b>applied machine learning</b>.<br /><br />
-              My work spans <b>sports analytics, finance, and pharmaceutical R&D</b> — turning complex datasets into clear, actionable insights.
+              I specialise in <b>Data Visualisation</b> and <b>Applied Data Science</b>. <br></br><br></br>
+              My work spans <b>Sports Analytics, Finance, and Pharmaceutical R&D</b> — turning complex datasets into clear, actionable insights.
             </p>
             <div className="social-links">
               <a

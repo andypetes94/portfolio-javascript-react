@@ -181,6 +181,29 @@ export default function Projects() {
           </div>
         </div>
 
+        {/* ── In Progress ── */}
+        <div className="proj-section">
+          <div className="proj-section-label">In Progress</div>
+          <div className="wip-card">
+            <div className="wip-badge">Coming Soon</div>
+            <h3 className="wip-title">World Cup Data Visualisation</h3>
+            <p className="wip-desc">
+              An interactive exploration of every FIFA World Cup — spanning group stages, knockout rounds,
+              goal patterns, squad evolution, and host nation performance. Built with D3.js and React.
+            </p>
+            <div className="wip-tags">
+              <span className="wip-tag">D3.js</span>
+              <span className="wip-tag">React</span>
+              <span className="wip-tag">Interactive</span>
+              <span className="wip-tag">FIFA Data</span>
+            </div>
+            <div className="wip-progress">
+              <div className="wip-progress-bar" />
+            </div>
+            <div className="wip-progress-label">In development</div>
+          </div>
+        </div>
+
       </div>
     </section>
   )

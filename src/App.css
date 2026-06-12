@@ -170,6 +170,7 @@
   padding: 4px 14px 8px;
   border-radius: 3px;
   display: inline;
+  white-space: nowrap;
 }
 
 .social-links {
@@ -828,6 +829,92 @@
   color: #9a9aaa;
   text-align: center;
   margin-top: 6px;
+}
+
+/* ── WIP card ── */
+.wip-card {
+  border: 1.5px dashed #d0d0da;
+  border-radius: 12px;
+  padding: 32px 36px;
+  background: #fafafa;
+  position: relative;
+}
+
+.wip-badge {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #52b788;
+  background: rgba(82, 183, 136, 0.1);
+  border: 1px solid rgba(82, 183, 136, 0.3);
+  border-radius: 4px;
+  padding: 3px 10px;
+  margin-bottom: 14px;
+}
+
+.wip-title {
+  font-family: 'Caveat', cursive;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111120;
+  margin: 0 0 10px 0;
+}
+
+.wip-desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #5a5a6a;
+  margin: 0 0 18px 0;
+  max-width: 600px;
+}
+
+.wip-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.wip-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #6b6b7a;
+  background: #f0f0f5;
+  border-radius: 4px;
+  padding: 3px 10px;
+}
+
+.wip-progress {
+  height: 4px;
+  background: #e8e8ed;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.wip-progress-bar {
+  height: 100%;
+  width: 18%;
+  background: linear-gradient(90deg, #52b788, #74c9a0);
+  border-radius: 2px;
+  animation: wip-pulse 2s ease-in-out infinite;
+}
+
+@keyframes wip-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+.wip-progress-label {
+  font-size: 11px;
+  color: #9a9aaa;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Methodology */
