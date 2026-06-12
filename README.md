@@ -2,7 +2,7 @@
 
 Personal portfolio website built with React 19 + Vite, showcasing data visualisation projects, data science applications, and academic publications.
 
-**Live site:** [andypetes94.github.io](https://andypetes94.github.io/portfolio-andrewpeters/)
+**Live site:** [andypetes94.github.io/portfolio-javascript-react](https://andypetes94.github.io/portfolio-javascript-react/)
 
 ## Features
 
