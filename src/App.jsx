@@ -107,16 +107,25 @@ const bgIcons = [
 
 function App() {
   const active = useActiveSection()
+  const [menuOpen, setMenuOpen] = useState(false)
+  const closeMenu = () => setMenuOpen(false)
   return (
     <div className="portfolio">
       <nav className="navbar">
         <div className="nav-brand">Andrew Peters</div>
-        <ul className="nav-links">
-          <li><a href="#home"                   className={`nav-link${active === 'home'                   ? ' active' : ''}`}>HOME</a></li>
-          <li><a href="#projects"               className={`nav-link${active === 'projects'               ? ' active' : ''}`}>DATA VISUALISATION PROJECTS</a></li>
-          <li><a href="#data-science-projects"  className={`nav-link${active === 'data-science-projects'  ? ' active' : ''}`}>DATA SCIENCE PROJECTS</a></li>
-          <li><a href="#publications"           className={`nav-link${active === 'publications'           ? ' active' : ''}`}>PUBLICATIONS</a></li>
-          <li><a href="#about"                  className={`nav-link${active === 'about'                  ? ' active' : ''}`}>ABOUT</a></li>
+        <button
+          className={`nav-hamburger${menuOpen ? ' open' : ''}`}
+          onClick={() => setMenuOpen(o => !o)}
+          aria-label="Toggle navigation"
+        >
+          <span /><span /><span />
+        </button>
+        <ul className={`nav-links${menuOpen ? ' nav-open' : ''}`}>
+          <li><a href="#home"                   onClick={closeMenu} className={`nav-link${active === 'home'                   ? ' active' : ''}`}>HOME</a></li>
+          <li><a href="#projects"               onClick={closeMenu} className={`nav-link${active === 'projects'               ? ' active' : ''}`}>DATA VISUALISATION PROJECTS</a></li>
+          <li><a href="#data-science-projects"  onClick={closeMenu} className={`nav-link${active === 'data-science-projects'  ? ' active' : ''}`}>DATA SCIENCE PROJECTS</a></li>
+          <li><a href="#publications"           onClick={closeMenu} className={`nav-link${active === 'publications'           ? ' active' : ''}`}>PUBLICATIONS</a></li>
+          <li><a href="#about"                  onClick={closeMenu} className={`nav-link${active === 'about'                  ? ' active' : ''}`}>ABOUT</a></li>
         </ul>
       </nav>
 
