@@ -1,16 +1,57 @@
-# React + Vite
+# Andrew Peters — Data Science Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website built with React 19 + Vite, showcasing data visualisation projects, data science applications, and academic publications.
 
-Currently, two official plugins are available:
+**Live site:** [andypetes94.github.io](https://andypetes94.github.io/portfolio-andrewpeters/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Interactive particle network in the hero section (tsparticles), with cursor repulsion
+- Scroll-aware navigation with animated underline on active section
+- Before/after data visualisation redesigns with methodology breakdowns
+- Lightbox image viewer for project visuals
+- RShiny project showcase with live demo links
+- Academic publications organised by research area
+- Full work experience, education, and skills timeline
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **React 19** + **Vite**
+- **tsparticles** — hero background network animation
+- **D3.js** — data visualisation
+- **Google Fonts** — Caveat, Barlow Condensed, Inter
+- CSS custom properties, keyframe animations, IntersectionObserver for scroll-linked nav
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Sections
+
+| Section | Content |
+|---|---|
+| Hero | Intro, social links (LinkedIn, GitHub, Email, Google Scholar) |
+| Data Visualisation Projects | Redesign methodology, before/after case studies, HYROX personal data |
+| Data Science Projects | RShiny dashboards — Running, FPL Desktop, FPL Mobile |
+| Publications | Football analytics, conference presentations, genomics research |
+| About | Work experience, education, CBI Style Guide, workshops, technical skills |
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+Then open [http://localhost:5173](http://localhost:5173).
+
+## Build
+
+```bash
+npm run build
+```
+
+Output is written to `dist/`.
+
+## Contact
+
+- Email: andrewpeters1994@gmail.com
+- LinkedIn: [andrew-peters-phd](https://www.linkedin.com/in/andrew-peters-phd-70b58292/)
+- GitHub: [andypetes94](https://github.com/andypetes94)
+- Google Scholar: [Andrew Peters](https://scholar.google.com/citations?user=nIgl7IMAAAAJ&hl=en)
