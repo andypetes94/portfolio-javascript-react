@@ -190,7 +190,7 @@ function App() {
 
           <div className="hero-photo">
             <div className="photo-circle">
-              <img src="/profile.jpeg" alt="Andrew Peters" className="profile-photo" />
+              <img src={`${import.meta.env.BASE_URL}profile.jpeg`} alt="Andrew Peters" className="profile-photo" />
             </div>
           </div>
         </div>

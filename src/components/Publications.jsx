@@ -1,3 +1,5 @@
+const PUB_BASE = import.meta.env.BASE_URL
+
 const ExternalLinkIcon = () => (
   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ marginLeft: 4, verticalAlign: 'middle' }}>
     <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
@@ -33,7 +35,7 @@ const pubGroups = [
         description: 'Compares the original xPT model with leakage-corrected alternatives across multiple modelling approaches to distinguish retrospective from prospective models.',
         paper: 'https://doi.org/10.1080/02701367.2026.2677718',
         github: 'https://github.com/andypetes94/xTurnovers_Models',
-        image: '/Timing_Matters.png',
+        image: `${PUB_BASE}Timing_Matters.png`,
       },
       {
         year: 2026,
@@ -42,7 +44,7 @@ const pubGroups = [
         description: 'Extends the xPT framework to inform pressing strategy and introduces the Expected Pass Turnovers Forced (xPTF) metric.',
         paper: 'https://www.tandfonline.com/doi/full/10.1080/24748668.2026.2671547',
         github: 'https://github.com/andypetes94/ExpectedPassTurnovers',
-        image: '/Applications.png',
+        image: `${PUB_BASE}Applications.png`,
       },
       {
         year: 2025,
@@ -51,7 +53,7 @@ const pubGroups = [
         description: 'Uses a semi-supervised machine learning approach with Shapley values and clustering to identify pressing roles beyond traditional positional labels.',
         paper: 'https://doi.org/10.2478/ijcss-2025-0013',
         github: null,
-        image: '/Pressing_Roles.png',
+        image: `${PUB_BASE}Pressing_Roles.png`,
       },
       {
         year: 2025,
@@ -60,7 +62,7 @@ const pubGroups = [
         description: 'Employs a rule-based approach to classify counterpressing and examines relationships between rest-defence positioning and shot or territory concession.',
         paper: 'https://www.tandfonline.com/doi/full/10.1080/24748668.2025.2473799',
         github: null,
-        image: '/Counterpressing.jpg',
+        image: `${PUB_BASE}Counterpressing.jpg`,
       },
       {
         year: 2024,
@@ -69,7 +71,7 @@ const pubGroups = [
         description: 'Creates a novel metric, Expected Pass Turnovers (xPT), using a logistic mixed-effects model to evaluate possession retention from passing events.',
         paper: 'https://www.tandfonline.com/doi/full/10.1080/02640414.2024.2379697',
         github: 'https://github.com/andypetes94/ExpectedPassTurnovers/',
-        image: '/Passing_Turnovers.jpg',
+        image: `${PUB_BASE}Passing_Turnovers.jpg`,
       },
     ],
   },
@@ -85,7 +87,7 @@ const pubGroups = [
         description: 'Demonstrated how machine learning and positional data can identify pressing triggers and target patterns for elite sports environments.',
         paper: null,
         github: null,
-        image: '/Conference.jpg',
+        image: `${PUB_BASE}Conference.jpg`,
       },
     ],
   },
@@ -101,7 +103,7 @@ const pubGroups = [
         description: 'Investigates germline and somatic mutation rates, finding that late-replicated regions show evidence of an elevated rate of somatic mutation.',
         paper: 'https://academic.oup.com/genetics/article/225/2/iyad128/7224426?login=false',
         github: null,
-        image: '/Genetics._Publicationjpg.jpg',
+        image: `${PUB_BASE}Genetics._Publicationjpg.jpg`,
       },
     ],
   },
