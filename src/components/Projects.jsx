@@ -103,8 +103,36 @@ export default function Projects() {
           <h2 className="projects-heading">Data Visualisation Projects</h2>
         </div>
 
-        {/* ── Methodology ── */}
+        {/* ── World Cup Project ── */}
         <div className="proj-section">
+          <div className="proj-section-label">Interactive Data Story</div>
+          <div className="live-project-card">
+            <div className="live-project-body">
+              <div className="live-project-tags">
+                <span className="live-project-tag">D3.js</span>
+                <span className="live-project-tag">React</span>
+                <span className="live-project-tag">Interactive</span>
+                <span className="live-project-tag">FIFA Data</span>
+              </div>
+              <h3 className="live-project-title">World Cup 2026 — A Data Story</h3>
+              <p className="live-project-desc">
+                A data-driven portrait of football fever before the 2026 FIFA World Cup — who the world is watching, what it's costing them, and how far the game itself will travel to crown a winner.
+                Explores Wikipedia traffic, Google search trends, ticket prices, and the tournament's historic expansion as the US, Canada, and Mexico prepare to host the biggest World Cup yet.
+              </p>
+              <a
+                href="https://andypetes94.github.io/world-cup-visualisation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="live-project-btn"
+              >
+                View Project <ExternalLinkIcon />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* ── Methodology (commented out — uncomment to restore) ── */}
+        {/* <div className="proj-section">
           <div className="proj-section-label">Redesign Methodology</div>
           <p className="proj-section-intro">
             Redesigning a chart is about understanding audience perception and context, not just aesthetics.
@@ -119,7 +147,7 @@ export default function Projects() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* ── Before / After Redesigns ── */}
         <div className="proj-section">
@@ -181,28 +209,6 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* ── In Progress ── */}
-        <div className="proj-section">
-          <div className="proj-section-label">In Progress</div>
-          <div className="wip-card">
-            <div className="wip-badge">Coming Soon</div>
-            <h3 className="wip-title">World Cup Data Visualisation</h3>
-            <p className="wip-desc">
-              An interactive exploration of every FIFA World Cup — spanning group stages, knockout rounds,
-              goal patterns, squad evolution, and host nation performance. Built with D3.js and React.
-            </p>
-            <div className="wip-tags">
-              <span className="wip-tag">D3.js</span>
-              <span className="wip-tag">React</span>
-              <span className="wip-tag">Interactive</span>
-              <span className="wip-tag">FIFA Data</span>
-            </div>
-            <div className="wip-progress">
-              <div className="wip-progress-bar" />
-            </div>
-            <div className="wip-progress-label">In development</div>
-          </div>
-        </div>
 
       </div>
     </section>

@@ -706,7 +706,7 @@
   border-radius: 8px;
   border: 1px solid #e8e8ed;
   display: block;
-  background: #f8f9fa;
+  background: #ffffff;
 }
 
 /* ── Hyrox thumbnail + lightbox ── */
@@ -829,6 +829,78 @@
   color: #9a9aaa;
   text-align: center;
   margin-top: 6px;
+}
+
+/* ── Live project card ── */
+.live-project-card {
+  border: 1.5px solid #e8e8ed;
+  border-left: 4px solid #52b788;
+  border-radius: 12px;
+  padding: 32px 36px;
+  background: #fff;
+  transition: box-shadow 0.2s;
+}
+
+.live-project-card:hover {
+  box-shadow: 0 6px 24px rgba(82, 183, 136, 0.1);
+}
+
+.live-project-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.live-project-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #52b788;
+  background: rgba(82, 183, 136, 0.1);
+  border: 1px solid rgba(82, 183, 136, 0.25);
+  border-radius: 4px;
+  padding: 3px 10px;
+}
+
+.live-project-title {
+  font-family: 'Caveat', cursive;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111120;
+  margin: 0 0 10px 0;
+}
+
+.live-project-desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #5a5a6a;
+  margin: 0 0 22px 0;
+  max-width: 620px;
+}
+
+.live-project-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #52b788;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.live-project-btn:hover {
+  background: #3a9d6e;
+  transform: translateY(-2px);
 }
 
 /* ── WIP card ── */

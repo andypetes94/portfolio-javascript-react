@@ -1,5 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 const BASE = 'https://andypetes94.github.io/portfolio-andrewpeters'
 
+// eslint-disable-next-line no-unused-vars
 const ExternalLinkIcon = () => (
   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ marginLeft: 5, verticalAlign: 'middle' }}>
     <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
@@ -160,8 +162,8 @@ export default function About() {
           </div>
         </div>
 
-        {/* Style Guide */}
-        <div className="about-section">
+        {/* Style Guide (commented out — uncomment to restore) */}
+        {/* <div className="about-section">
           <div className="about-section-label">CBI Data Visualisation Style Guide</div>
           <div className="styleguide-card">
             <div className="styleguide-text">
@@ -185,7 +187,7 @@ export default function About() {
               <img src={`${BASE}/images/Palette.png`} alt="CBI colour palette" className="styleguide-img" />
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Teaching */}
         <div className="about-section">
