@@ -208,8 +208,95 @@ export default function Projects() {
             </div>
           </div>
         </div>
+                {/* ── Chart Redesign Process ── */}
+        <div className="proj-section">
+          <div className="proj-section-label">
+            Chart Redesign Process
+          </div>
 
+          <p className="proj-section-intro">
+            Redesigning a chart is about understanding audience perception and
+            context, not just aesthetics. I use a structured process that
+            considers the audience, purpose, message, visual hierarchy and
+            accessibility before producing the final chart.
+          </p>
 
+          <div className="methodology-grid">
+            {methodology.map((m) => (
+              <div
+                key={m.part}
+                className="methodology-card"
+              >
+                <div className="methodology-part">
+                  {m.part}
+                </div>
+
+                <h4 className="methodology-title">
+                  {m.title}
+                </h4>
+
+                <img
+                  src={m.image}
+                  alt={m.title}
+                  className="methodology-img"
+                />
+
+                <p className="methodology-desc">
+                  {m.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ── Data Visualisation Style Guide ── */}
+        <div className="proj-section">
+          <div className="proj-section-label">
+            Data Visualisation Style Guide
+          </div>
+
+          <div className="styleguide-card">
+            <div className="styleguide-text">
+              <div className="styleguide-meta">
+                Central Bank of Ireland · 2024
+              </div>
+
+              <p className="styleguide-desc">
+                In 2024, I created a Data Visualisation Style Guide for the
+                Central Bank of Ireland in collaboration with the Communications
+                department. The guide formalised the institution&apos;s approach
+                to visual communication, helping ensure that charts and
+                dashboards across departments followed a consistent, accessible
+                and design-informed standard.
+              </p>
+
+              <p className="styleguide-desc">
+                The guide established colour palettes aligned with accessibility
+                and brand identity, promoted best practices for labelling,
+                annotation and storytelling, and standardised visual output
+                across RShiny dashboards and publication workflows.
+              </p>
+
+              <a
+                href={`${BASE}/pdf/CBI Data Viz Style Guide.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="styleguide-btn"
+              >
+                View Data Visualisation Style Guide
+                <ExternalLinkIcon />
+              </a>
+            </div>
+
+            {/*<div className="styleguide-img-wrap">
+              <img
+                src={`${BASE}/images/Palette.png`}
+                alt="Data Visualisation Style Guide colour palette"
+                className="styleguide-img"
+              />
+            </div>*/}
+          </div>
+        </div>
       </div>
     </section>
   )
