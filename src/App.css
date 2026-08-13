@@ -1509,3 +1509,228 @@
     font-size: 44px;
   }
 }
+
+/* ── Code On STEM Project ── */
+
+.code-on-section {
+  background: #ffffff;
+  border-top: 1px solid #e8e8ed;
+  padding: 80px 52px;
+}
+
+.code-on-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.code-on-heading {
+  margin-bottom: 40px;
+}
+
+.code-on-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #52b788;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0 0 10px 0;
+}
+
+.code-on-heading h2 {
+  font-family: 'Caveat', cursive;
+  font-size: 54px;
+  font-weight: 700;
+  color: #111120;
+  line-height: 1.1;
+  margin: 0 0 14px 0;
+}
+
+.code-on-introduction {
+  max-width: 680px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #7a7a8a;
+  margin: 0;
+}
+
+.code-on-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.85fr) minmax(300px, 1.15fr);
+  gap: 32px;
+  align-items: center;
+  padding: 28px;
+  background: #f8f9fa;
+  border: 1px solid #e8e8ed;
+  border-left: 4px solid #52b788;
+  border-radius: 12px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.code-on-card:hover {
+  border-color: rgba(82, 183, 136, 0.45);
+  box-shadow: 0 6px 24px rgba(82, 183, 136, 0.1);
+}
+
+.code-on-image-container {
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #e8e8ed;
+  background: #ffffff;
+}
+
+.code-on-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.code-on-card:hover .code-on-image {
+  transform: scale(1.03);
+}
+
+.code-on-content {
+  min-width: 0;
+}
+
+.code-on-content p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #5a5a6a;
+  margin: 0 0 16px 0;
+}
+
+.code-on-stat {
+  display: flex;
+  flex-direction: column;
+  margin: 22px 0;
+  padding: 10px 0 10px 14px;
+  border-left: 3px solid #52b788;
+}
+
+.code-on-stat-value {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #111120;
+}
+
+.code-on-stat-label {
+  font-size: 12px;
+  color: #8a8a9a;
+  margin-top: 4px;
+}
+
+.code-on-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 0;
+  margin: 20px 0 24px 0;
+  list-style: none;
+}
+
+.code-on-skills li {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: #52b788;
+  background: rgba(82, 183, 136, 0.1);
+  border: 1px solid rgba(82, 183, 136, 0.25);
+  border-radius: 4px;
+  padding: 4px 9px;
+}
+
+.code-on-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #52b788;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.code-on-link:hover {
+  background: #3a9d6e;
+  transform: translateY(-2px);
+}
+
+.code-on-link:focus-visible {
+  outline: 3px solid #b7e4c7;
+  outline-offset: 3px;
+}
+
+/* ── Code On responsive layout ── */
+
+@media (max-width: 820px) {
+  .code-on-section {
+    padding: 60px 24px;
+  }
+
+  .code-on-heading h2 {
+    font-size: 42px;
+  }
+
+  .code-on-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .code-on-section {
+    padding: 52px 20px;
+  }
+
+  .code-on-heading h2 {
+    font-size: 38px;
+  }
+
+  .code-on-card {
+    padding: 18px;
+  }
+
+  .code-on-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ── Education thesis links ── */
+
+.education-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  margin-top: 4px;
+  color: #52b788;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.18s, transform 0.18s;
+}
+
+.education-link:hover {
+  color: #2a7a58;
+  text-decoration: underline;
+  transform: translateX(2px);
+}
+
+.education-link:focus-visible {
+  outline: 3px solid #b7e4c7;
+  outline-offset: 3px;
+  border-radius: 3px;
+}

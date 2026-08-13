@@ -4,9 +4,10 @@ import HeroNetwork from './components/HeroNetwork.jsx'
 import Projects from './components/Projects.jsx'
 import DataScienceProjects from './components/DataScienceProjects.jsx'
 import Publications from './components/Publications.jsx'
+import CodeOnProject from './components/CodeOnProject.jsx'
 import About from './components/About.jsx'
 
-const SECTIONS = ['home', 'projects', 'data-science-projects', 'publications', 'about']
+const SECTIONS = ['home', 'projects', 'data-science-projects', 'stem-project', 'publications', 'about']
 
 function useActiveSection() {
   const [active, setActive] = useState('home')
@@ -124,6 +125,7 @@ function App() {
           <li><a href="#home"                   onClick={closeMenu} className={`nav-link${active === 'home'                   ? ' active' : ''}`}>HOME</a></li>
           <li><a href="#projects"               onClick={closeMenu} className={`nav-link${active === 'projects'               ? ' active' : ''}`}>DATA VISUALISATION PROJECTS</a></li>
           <li><a href="#data-science-projects"  onClick={closeMenu} className={`nav-link${active === 'data-science-projects'  ? ' active' : ''}`}>DATA SCIENCE PROJECTS</a></li>
+          <li><a href="#stem-project"           onClick={closeMenu} className={`nav-link${active === 'stem-project'           ? ' active' : ''}`}>STEM ENTREPRENEURSHIP</a></li>
           <li><a href="#publications"           onClick={closeMenu} className={`nav-link${active === 'publications'           ? ' active' : ''}`}>PUBLICATIONS</a></li>
           <li><a href="#about"                  onClick={closeMenu} className={`nav-link${active === 'about'                  ? ' active' : ''}`}>ABOUT</a></li>
         </ul>
@@ -207,6 +209,7 @@ function App() {
 
       <Projects />
       <DataScienceProjects />
+      <CodeOnProject />
       <Publications />
       <About />
 

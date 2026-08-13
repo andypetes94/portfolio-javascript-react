@@ -76,6 +76,35 @@ const pubGroups = [
     ],
   },
   {
+  label: 'Bioinformatics',
+  accent: '#c47c5a',
+  thumbBg: 'rgba(196, 124, 90, 0.08)',
+  entries: [
+        {
+      year: 2023,
+      title: 'Inferring Somatic Mutations from RNA-Seq Data',
+      journal: 'Genetics',
+      description:
+        'Investigates germline and somatic mutation rates, finding that late-replicated regions show evidence of an elevated rate of somatic mutation.',
+      paper:
+        'https://academic.oup.com/genetics/article/225/2/iyad128/7224426?login=false',
+      github: null,
+      image: `${PUB_BASE}Genetics_Publication.jpg`,
+    },
+    {
+      year: 2020,
+      title: 'Selection Shapes Synonymous Stop Codon Use in Mammals',
+      journal: 'Journal of Molecular Evolution',
+      description:
+        'Investigates the evolutionary selection pressures acting on synonymous stop codons in mammals. The study estimates that approximately 57% of mammalian genes show evidence of selection acting on stop-codon preference, with UGA stop codons more likely to be conserved.',
+      paper:
+        'https://pubmed.ncbi.nlm.nih.gov/32617614/',
+      github: null,
+      image: `${PUB_BASE}Stop_Codon.jpg`,
+    },
+  ],
+},
+  {
     label: 'Conference Presentations',
     accent: '#6394d2',
     thumbBg: 'rgba(99, 148, 210, 0.08)',
@@ -88,22 +117,6 @@ const pubGroups = [
         paper: null,
         github: null,
         image: `${PUB_BASE}Conference.jpg`,
-      },
-    ],
-  },
-  {
-    label: 'Other Research',
-    accent: '#c47c5a',
-    thumbBg: 'rgba(196, 124, 90, 0.08)',
-    entries: [
-      {
-        year: 2023,
-        title: 'Inferring Somatic Mutations from RNA-Seq Data',
-        journal: 'Genetics',
-        description: 'Investigates germline and somatic mutation rates, finding that late-replicated regions show evidence of an elevated rate of somatic mutation.',
-        paper: 'https://academic.oup.com/genetics/article/225/2/iyad128/7224426?login=false',
-        github: null,
-        image: `${PUB_BASE}Genetics._Publicationjpg.jpg`,
       },
     ],
   },
