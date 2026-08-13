@@ -134,12 +134,34 @@ export default function Publications() {
         </div>
 
         {pubGroups.map((group) => (
-          <div key={group.label} className="pub-group">
+          <div
+            key={group.label}
+            id={group.label === 'Bioinformatics' ? 'bioinformatics-publications' : undefined}
+            className="pub-group"
+          >
             <div className="pub-group-label">{group.label}</div>
 
             <div className="pub-list">
               {group.entries.map((pub) => (
-                <article key={pub.title} className="pub-entry">
+                <article
+                  key={pub.title}
+                  id={
+                    pub.title === 'Defining Pressing Roles in Football'
+                      ? 'pressing-roles-publication'
+                      : pub.title === 'Counterpressing in Football'
+                        ? 'counterpressing-publication'
+                        : pub.title === 'Modelling Passing in Football'
+                          ? 'passing-turnovers-publication'
+                          : pub.title === 'Applying an Expected Pass Turnovers Model to Inform Pressing Strategies in Professional Football'
+                            ? 'applications-publication'
+                            : pub.title === 'Inferring Somatic Mutations from RNA-Seq Data'
+                              ? 'somatic-mutations-publication'
+                              : pub.title === 'Selection Shapes Synonymous Stop Codon Use in Mammals'
+                                ? 'stop-codon-publication'
+                                : undefined
+                  }
+                  className="pub-entry"
+                >
                   <div
                     className="pub-thumb"
                     style={{ background: group.thumbBg }}

@@ -55,7 +55,7 @@ const experience = [
     ],
   },
   {
-    role: 'Senior Data Visualisation Specialist',
+  role: 'Senior Data Visualisation Specialist',
     company: 'Central Bank of Ireland',
     period: 'Oct 2023 – Dec 2024',
     bullets: [
@@ -64,6 +64,8 @@ const experience = [
       'Elevated the visualisation standards of the Quarterly Bulletin by redesigning analytical charts and graphics used in the Bank’s flagship publication.',
       'Delivered technical training on ggplot2 and non-technical training in data visualisation principles to internal staff across the organisation.',
     ],
+    link: 'https://andypetes94.github.io/portfolio-andrewpeters/pdf/CBI%20Data%20Viz%20Style%20Guide.pdf',
+    linkText: 'View CBI Data Visualisation Style Guide',
   },
   {
     role: 'Senior Data Scientist',
@@ -73,8 +75,27 @@ const experience = [
       'Maintained and queried AWS-hosted database infrastructure using SQL, R and Python, developing Tableau dashboards and interactive RShiny applications for Performance Analysis, Sports Science and Recruitment teams.',
       'Delivered ad hoc analytical reports directly to the Director of Football to support recruitment and team decisions.',
       'Developed a machine-learning player evaluation framework, generating player ratings across multiple aspects of performance and deploying outputs through RShiny applications for talent identification and player comparison.',
-      'Developed an XGBoost model to quantify and predict successful counterpressing events, contributing to peer-reviewed research on defensive transitions.',
-      'Designed mixed-effects statistical models to evaluate the impact of turnovers on team performance, translating model outputs into actionable coaching insights.',
+      {
+        text: 'Developed a semi-supervised machine learning framework to identify and attribute player roles, including pressing roles, using event-based performance data and Shapley-value feature selection.',
+        publicationId: 'pressing-roles-publication',
+      },
+      {
+        text: 'Developed an XGBoost model to quantify and predict successful counterpressing events, contributing to peer-reviewed research on defensive transitions.',
+        publicationId: 'counterpressing-publication',
+      },
+      {
+        text: 'Designed mixed-effects statistical models to evaluate the impact of turnovers on team performance, translating model outputs into actionable coaching insights.',
+        publications: [
+          {
+            id: 'passing-turnovers-publication',
+            label: 'View model publication',
+          },
+          {
+            id: 'applications-publication',
+            label: 'View applications publication',
+          },
+        ],
+      },
     ],
   },
   {
@@ -88,13 +109,19 @@ const experience = [
       'Compiled pre- and post-match reports evaluating individual and team-level KPIs for coaching staff.',
     ],
   },
-  {
+    {
     role: 'Genomics Data Scientist',
     company: 'University of Galway',
     period: 'Oct 2018 – Feb 2021',
     bullets: [
-      'Developed and optimised bioinformatics workflows for RNA-Seq processing, variant detection and genomic data analysis, contributing to peer-reviewed research on somatic mutation inference from transcriptomic datasets.',
-      'Applied statistical and computational methods to large-scale comparative genomics datasets, investigating evolutionary selection pressures on mammalian stop-codon usage and contributing to a publication in the Journal of Molecular Evolution.',
+      {
+        text: 'Developed and optimised bioinformatics workflows for RNA-Seq processing, variant detection and genomic data analysis, contributing to peer-reviewed research on somatic mutation inference from transcriptomic datasets.',
+        publicationId: 'somatic-mutations-publication',
+      },
+      {
+        text: 'Applied statistical and computational methods to large-scale comparative genomics datasets, investigating evolutionary selection pressures on mammalian stop-codon usage and contributing to a publication in the Journal of Molecular Evolution.',
+        publicationId: 'stop-codon-publication',
+      },
     ],
   },
 ]
@@ -108,6 +135,9 @@ const education = [
       'Developed and evaluated machine learning and statistical models for tactical and performance analysis in elite football, including comparative assessment of machine learning algorithms, XGBoost modelling, mixed-effects frameworks and player role assignment. Presented findings at the 13th World Congress in the Performance Analysis of Sport (2022).',
     link: 'https://drive.google.com/file/d/1AI9PY8fVc-_fTPns5gA7m5e4KV6t0ZIg/view',
     linkText: 'View PhD thesis',
+    secondaryLink:
+      'https://drive.google.com/file/d/1POGSRSFAL5OZN4VrsrO8xKJBwSTRzTn_/view',
+    secondaryLinkText: 'View five first-author publications',
   },
   {
     degree: 'MSc, Genomics Data Science (High 1.1)',
@@ -181,26 +211,65 @@ export default function About() {
 
           <div className="about-list">
             {experience.map((job) => (
-              <div
-                key={`${job.company}-${job.role}`}
-                className="about-entry"
-              >
-                <div className="about-entry-left">
-                  <span className="about-period">{job.period}</span>
-                </div>
+  <div
+    key={`${job.company}-${job.role}`}
+    className="about-entry"
+  >
+    <div className="about-entry-left">
+      <span className="about-period">{job.period}</span>
+    </div>
 
-                <div className="about-entry-body">
-                  <div className="about-role">{job.role}</div>
-                  <div className="about-org">{job.company}</div>
+    <div className="about-entry-body">
+      <div className="about-role">{job.role}</div>
+      <div className="about-org">{job.company}</div>
 
-                  <ul className="about-bullets">
-                    {job.bullets.map((bullet) => (
-                      <li key={bullet}>{bullet}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
+      <ul className="about-bullets">
+        {job.bullets.map((bullet) => (
+          <li key={bullet.text || bullet}>
+            {typeof bullet === 'string' ? (
+              bullet
+            ) : (
+              <>
+                {bullet.text}{' '}
+                {bullet.publicationId && (
+                  <a
+                    href={`#${bullet.publicationId}`}
+                    className="inline-publication-link"
+                  >
+                    View publication
+                  </a>
+                )}
+
+                {bullet.publications?.map((publication) => (
+                  <a
+                    key={publication.id}
+                    href={`#${publication.id}`}
+                    className="inline-publication-link"
+                  >
+                    {publication.label}
+                  </a>
+                ))}
+              </>
+            )}
+          </li>
+        ))}
+      </ul>
+
+      {job.link && (
+        <a
+          href={job.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="education-link"
+          aria-label={`${job.linkText} at ${job.company}`}
+        >
+          <span>{job.linkText}</span>
+          <ExternalLinkIcon />
+        </a>
+      )}
+    </div>
+  </div>
+))}
           </div>
         </div>
 
@@ -224,16 +293,31 @@ export default function About() {
 
                   <p className="about-detail">{edu.detail}</p>
 
-                  <a
-                    href={edu.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="education-link"
-                    aria-label={`${edu.linkText} at ${edu.institution}`}
-                  >
-                    <span>{edu.linkText}</span>
-                    <ExternalLinkIcon />
-                  </a>
+                  <div className="education-links">
+                    <a
+                      href={edu.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="education-link"
+                      aria-label={`${edu.linkText} at ${edu.institution}`}
+                    >
+                      <span>{edu.linkText}</span>
+                      <ExternalLinkIcon />
+                    </a>
+
+                    {edu.secondaryLink && (
+                      <a
+                        href={edu.secondaryLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="education-link"
+                        aria-label={`${edu.secondaryLinkText} from ${edu.institution}`}
+                      >
+                        <span>{edu.secondaryLinkText}</span>
+                        <ExternalLinkIcon />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
